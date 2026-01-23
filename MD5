@@ -1,0 +1,14 @@
+c7500d73745208bb91165aacff232c50 *DESCRIPTION
+bdb561d4710121a7e5a4ca608ea8306f *NAMESPACE
+cecf19ac11ebce32a42600b5a5f4b04e *NEWS.md
+3461722c926b4df7b1d31df856485c1f *R/CTE.R
+811e245f251f0afe166ad1e23c5993c8 *R/example_temp_data.R
+8805d5ad453d07d4006f3c4931639423 *README.md
+f7656d84c24a51cd06427636597b8a40 *build/vignette.rds
+bfefc53d7383a614bd3da2db39c8915b *data/example_temp_data.RData
+213a5531c69341f09aab6b233a6278aa *inst/doc/cte_constant_temperature_equivalent_vignette.R
+2875ad2e2b6b78d656d96ce4eeddb1b9 *inst/doc/cte_constant_temperature_equivalent_vignette.Rmd
+e78fe1a45f234a88f628e614d215b338 *inst/doc/cte_constant_temperature_equivalent_vignette.pdf
+81ffb69fc3a126e173bcfaaea05fca6e *man/CTE.Rd
+f97cd49240fe8354b6f0eb70d5b5e283 *man/example_temp_data.Rd
+2875ad2e2b6b78d656d96ce4eeddb1b9 *vignettes/cte_constant_temperature_equivalent_vignette.Rmd
