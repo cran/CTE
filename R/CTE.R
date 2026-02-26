@@ -1,15 +1,15 @@
 #' Calculate Constant Temperature Equivalent (CTE)
 #'
-#' Calculate movements in a stream network for multiple individuals
+#' Calculate daily constant temperature equivalents
 #'
 #' @param M (integer) Mean temperature for a given day in degrees centigrade
-#' @param R (integer) Maximum deviation of temperatures from M for a given day in degrees centigrade (e.g., if the range of temperatures is 14‒16 and M = 20, then R = 6)
+#' @param R (integer) Maximum deviation of temperatures from M for a given day in degrees centigrade (e.g., if the range of temperatures is 14‒25 and M = 20, then R = 6)
 #' @param T0 (integer) Temperature in degrees centigrade below which no development will occur. Default = 0.
 #' @param t (integer; 0 < t < 2pi) Starting seed for calculating the point along the curve above which half of development occurs. Any value > 0 and < 2pi will work. Default = pi.
 #' @param max.it (numeric) Maximum number of times the function will try to find a solution for a given day. In rare cases, no stable solution exists, in which case it will attempt to find a solution max.it number of times before returning NA. Default = 10000
 #' @return Numeric value of the CTE for a given day (in degrees centigrade)
 #' @details
-#' CTE takes input values for a given day and returns the CTE using the formulas in Georges (1989). It automatically selects the appropriate formula based on whether the minimum temperature (M-R) is less than T0. T0 may not be precisely known in all cases, but should be estimated based on knowledge of the species being studied. If you think your nest never dropped below T0 (i.e., there was not point at which development was not occurring) then set T0 lower than your minimum temperature. If M+R < T0 (i.e., all temps on a given day were less than T0, then T0 is returned as CTE). Because this function operates on data from a single day, in most cases you will want to run it within a looping function. See Vignette for details on the formulas and examples.
+#' CTE takes input values for a given day and returns the CTE using the formulas in Georges (1989). It automatically selects the appropriate formula based on whether the minimum temperature (M-R) is less than T0. T0 may not be precisely known in all cases, but should be estimated based on knowledge of the species being studied. If you think your nest never dropped below T0 (i.e., there was not point at which development was not occurring) then set T0 lower than your minimum temperature. If M+R < T0 (i.e., all temps on a given day were less than T0, then T0 is returned as CTE). Because this function operates on data from a single day, in most cases you will want to loop it over your nests and dates to get a CTE per nest per date. You can accomplish this with a for loop or functions in packages like dplyr and plyr. See Vignette for details on the formulas and examples.
 #'
 #' @references
 #' Georges, A. (1989).

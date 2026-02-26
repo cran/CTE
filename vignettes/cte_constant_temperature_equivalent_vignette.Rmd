@@ -28,10 +28,12 @@ This package implements the formulas for the Constant Temperature Equivalent (CT
 
 In short, CTE takes data on the fluctuations in natural nests and translates the data into a single constant value (the CTE) that would produce the same rate of egg development. Stated another way, CTE is the temperature above which half of embryonic development occurs. Thus, eggs in an incubator set to a given CTE will develop at the same rate as the eggs in the natural nest from which the CTE was calculated.
 
-Three input values are needed to calculate CTE for a given day:
+Note that the math of CTE is based on daily temperature cycles. If you are interested in CTE over longer periods of time, calculate the CTE for each date in your data, then average those daily CTEs (see example later in this document).
+
+Three input values are needed to calculate CTE for a given date:
 
 * *M* = mean temperature
-* *R* = the maximum deviation of temperatures from *M* (e.g., if the range of temperatures is 14‒16 and *M* = 20, then *R* = 6)
+* *R* = the maximum deviation of temperatures from *M* (e.g., if the range of temperatures is 14‒25 and *M* = 20, then *R* = 6)
 * *T*~0~ = the temperature below which no development occurs (this value should be based on a general knowledge of the species being studied)
 
 Using those inputs, CTE can be calculated by first describing the daily sinusoidal variation in nest temperature using Formula 1, where, for a given day, *T* is the temperature (in degrees centigrade) at a given time of day (position along the curve), and *t* is the time of day (position along the curve) expressed as a range from 0‒2*pi* (e.g., 06:00 = *pi*/2 = 1.57, 12:00 = *pi*, and 18:00 = 1.5*pi* = 4.71).
@@ -131,4 +133,4 @@ daily.values <- daily.values %>%
 daily.values 
 ```
 
-This returns the CTE for each nest for each date
+This returns the CTE for each nest for each date. You can then average this value over the days of your study, as well as looking at the variation and range of CTE values.

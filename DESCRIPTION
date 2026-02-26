@@ -1,14 +1,14 @@
 Package: CTE
 Type: Package
 Title: Constant Temperature Equivalent
-Version: 0.1.3
+Version: 0.1.5
 Authors@R: person(
     given = c("Donald", "T."),
     family = "McKnight",
     role = c("aut", "cre"),
     email = "donald.mcknight@my.jcu.edu.au",
     comment = c(affiliation = "Savanna Field Station"))
-Date: 2026-01-18
+Date: 2026-02-26
 Maintainer: Donald T. McKnight <donald.mcknight@my.jcu.edu.au>
 Description: Under natural conditions, nest temperatures fluctuate daily around a mean
     value, whereas in captivity they are often held constant. The Constant
@@ -25,7 +25,7 @@ Suggests: dplyr,knitr,rmarkdown
 Depends: R (>= 3.5)
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2026-01-20 00:05:15 UTC; Donald McKnight
+Packaged: 2026-02-26 17:08:16 UTC; Donald McKnight
 Author: Donald T. McKnight [aut, cre] (affiliation: Savanna Field Station)
 Repository: CRAN
-Date/Publication: 2026-01-23 15:50:02 UTC
+Date/Publication: 2026-02-26 17:30:02 UTC
